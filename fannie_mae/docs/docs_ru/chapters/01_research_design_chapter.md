@@ -35,7 +35,7 @@ Fannie Mae Primary Dataset. Источники не объединяются в 
 Формальный risk trigger не является санкцией или автономным решением. Он лишь
 ранжирует loan-month наблюдения для последующего анализа человеком. Первая
 policy v01 зафиксирована в
-[fannie_suptech_trigger_policy_v01.yml](../../config/fannie_suptech_trigger_policy_v01.yml).
+[fannie_suptech_trigger_policy_v01.yml](../../../config/fannie_suptech_trigger_policy_v01.yml).
 
 ## 1.4. Структура работы
 

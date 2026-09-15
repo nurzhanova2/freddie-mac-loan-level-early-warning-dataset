@@ -11,10 +11,10 @@
 январь 2021 — сентябрь 2025 года. Последняя дата выбрана потому, что исходные
 данные заканчиваются мартом 2026 года и для неё ещё доступно полное будущее
 окно в шесть месяцев. Схема разделения приведена на **рисунке 4.1** —
-[«Хронологическое разделение»](../../reports/figures/splits/fannie_temporal_split_timeline_v01.png).
+[«Хронологическое разделение»](../../../reports/figures/splits/fannie_temporal_split_timeline_v01.png).
 
 Объёмы, eligible наблюдения и частоты двух шестимесячных outcomes приведены в
-**таблице 4.1** — [«Сводка temporal split»](../../reports/splits/fannie_temporal_split_v01_summary.csv).
+**таблице 4.1** — [«Сводка temporal split»](../../../reports/splits/fannie_temporal_split_v01_summary.csv).
 Preprocessing, feature selection, calibration и class balancing выполняются
 исключительно на train-периоде. Идентификатор кредита используется лишь для
 соединения и контроля, но никогда не является признаком модели. Один кредит
@@ -44,19 +44,19 @@ deterioration; в out-of-time test — 65 970 573 и 65 331 004 соответс
 эксперимент. На out-of-time выборке ROC-AUC равен 0,8794 для formal adverse и
 0,7254 для early deterioration. Сравнение PR-AUC, объёмов выборок и ограничение
 некалиброванных вероятностей см. в **таблице 4.2** —
-[«Логистический baseline v01»](../../reports/models/logistic_baseline_v01_summary.csv).
-Подробный журнал см. в [отчёте этапа 13](13_initial_models_execution_report.md).
+[«Логистический baseline v01»](../../../reports/models/logistic_baseline_v01_summary.csv).
+Подробный журнал см. в [отчёте этапа 13](../13_initial_models_execution_report.md).
 Для логистической модели isotonic calibration уменьшила out-of-time Brier
 score с 0,021646 до 0,004320 для formal adverse и с 0,059429 до 0,022507 для
 early deterioration; см. **таблицу 4.3** —
-[«Сводка калибровки»](../../reports/models/logistic_isotonic_calibration_v01_summary.csv)
-и **рисунок 4.2** — [«Reliability formal adverse»](../../reports/figures/models/formal_adverse_6m_calibration_v01.png).
+[«Сводка калибровки»](../../../reports/models/logistic_isotonic_calibration_v01_summary.csv)
+и **рисунок 4.2** — [«Reliability formal adverse»](../../../reports/figures/models/formal_adverse_6m_calibration_v01.png).
 
 Пороговая политика оценена на ведущем XGBoost. При capacity top 1% для formal
 adverse precision равен 24,29%, recall — 50,09%; для early deterioration —
 12,47% и 5,33%. Полная trade-off таблица приведена в **таблице 4.4** —
-[«XGBoost alert policy»](../../reports/models/formal_adverse_6m_xgboost_alert_policy_v01.csv)
-и в [отчёте этапа 14](14_threshold_policy_execution_report.md).
+[«XGBoost alert policy»](../../../reports/models/formal_adverse_6m_xgboost_alert_policy_v01.csv)
+и в [отчёте этапа 14](../14_threshold_policy_execution_report.md).
 Для согласованных triggers lead time составляет в среднем 2,467 месяца до
 formal adverse и 2,993 месяца до early deterioration; см. **таблицу 4.5** —
-[lead time formal adverse](../../reports/models/formal_adverse_6m_trigger_lead_time_v01.csv).
+[lead time formal adverse](../../../reports/models/formal_adverse_6m_trigger_lead_time_v01.csv).

@@ -5,13 +5,13 @@
 
 ## Текст диссертации
 
-- [Аннотация и официальная тема](00_annotation.md)
-- [Глава 1. Концепция и дизайн исследования](01_research_design_chapter.md)
-- [Глава 2. Формирование и подготовка набора данных Fannie Mae](02_fannie_mae_data_preparation_chapter.md) — текст, который можно использовать как основу главы диссертации.
-- [Глава 3. Целевые переменные, признаки и контроль утечки](03_outcomes_features_leakage_chapter.md)
-- [Глава 4. Моделирование и временная валидация](04_models_validation_chapter.md)
-- [Глава 5. Интерпретируемость и model governance](05_explainability_governance_chapter.md)
-- [Глава 6. Результаты, обсуждение и выводы](06_results_discussion_chapter.md)
+- [Аннотация и официальная тема](chapters/00_annotation.md)
+- [Глава 1. Концепция и дизайн исследования](chapters/01_research_design_chapter.md)
+- [Глава 2. Формирование и подготовка набора данных Fannie Mae](chapters/02_fannie_mae_data_preparation_chapter.md) — текст, который можно использовать как основу главы диссертации.
+- [Глава 3. Целевые переменные, признаки и контроль утечки](chapters/03_outcomes_features_leakage_chapter.md)
+- [Глава 4. Моделирование и временная валидация](chapters/04_models_validation_chapter.md)
+- [Глава 5. Интерпретируемость и model governance](chapters/05_explainability_governance_chapter.md)
+- [Глава 6. Результаты, обсуждение и выводы](chapters/06_results_discussion_chapter.md)
 
 ## Технические приложения
 

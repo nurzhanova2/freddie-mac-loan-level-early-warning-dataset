@@ -51,11 +51,11 @@ full-documentation, fixed-rate кредитам с исходным сроком
 в семи отдельных processed panels. Они пока не объединены физически: это
 сохраняет provenance каждой acquisition cohort. Все семь raw-архивов прошли
 validation. Состав и временной охват выборки приведены в **таблице 2.1** —
-[«Охват acquisition cohorts»](../../reports/eda_v01/01_cohort_overview.csv).
+[«Охват acquisition cohorts»](../../../reports/eda_v01/01_cohort_overview.csv).
 Сравнение ключевых характеристик кредитов на момент выдачи приведено в
-**таблице 2.2** — [«Характеристики при выдаче»](../../reports/eda_v01/03_origination_characteristics.csv).
+**таблице 2.2** — [«Характеристики при выдаче»](../../../reports/eda_v01/03_origination_characteristics.csv).
 Графическое сравнение FICO и исходного LTV см. на **рисунке 2.1** —
-[«Характеристики выдачи по cohort»](../../reports/figures/eda_v01/03_origination_characteristics_trend.png).
+[«Характеристики выдачи по cohort»](../../../reports/figures/eda_v01/03_origination_characteristics_trend.png).
 
 ## 2.3. Контроль качества исходного файла
 

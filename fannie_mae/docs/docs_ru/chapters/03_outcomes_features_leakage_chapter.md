@@ -10,11 +10,11 @@
 
 ## 3.3. Признаки и leakage register
 
-Используются origination-характеристики, текущие balance/rate/loan-age показатели и исключительно прошлые состояния платежей. [Leakage register](../../data/dictionaries/fannie_2008q1_leakage_register_v01.csv) фиксирует решение для всех 113 полей. Zero Balance Code, Zero Balance Effective Date, foreclosure/disposition и другие post-event поля исключены из features. При termination, неизвестном будущем статусе или неполном будущем окне запись цензурируется, если событие ещё не наблюдалось.
+Используются origination-характеристики, текущие balance/rate/loan-age показатели и исключительно прошлые состояния платежей. [Leakage register](../../../data/dictionaries/fannie_2008q1_leakage_register_v01.csv) фиксирует решение для всех 113 полей. Zero Balance Code, Zero Balance Effective Date, foreclosure/disposition и другие post-event поля исключены из features. При termination, неизвестном будущем статусе или неполном будущем окне запись цензурируется, если событие ещё не наблюдалось.
 
 ## 3.4. Статус
 
-Labels построены для 22 415 219 loan-month строк. Formal adverse event: 264 892 события из 20 007 896 размеченных наблюдений на горизонте 3 месяца и 503 395 из 18 986 874 на горизонте 6 месяцев. Early deterioration: 758 624 из 19 152 309 и 1 277 828 из 18 168 886 соответственно. Полное описание и QA приведены в [отчёте этапов 7–9](07_09_execution_report.md). Definitions имеют статус v01 и могут уточняться только новой версией правил.
+Labels построены для 22 415 219 loan-month строк. Formal adverse event: 264 892 события из 20 007 896 размеченных наблюдений на горизонте 3 месяца и 503 395 из 18 986 874 на горизонте 6 месяцев. Early deterioration: 758 624 из 19 152 309 и 1 277 828 из 18 168 886 соответственно. Полное описание и QA приведены в [отчёте этапов 7–9](../07_09_execution_report.md). Definitions имеют статус v01 и могут уточняться только новой версией правил.
 
 ## 3.5. Первичный описательный анализ
 
@@ -25,16 +25,16 @@ adverse зафиксированы у cohort 2008Q1: 7,033% и 2,651% соотв
 2012Q1 эти величины равны 1,353% и 0,231%. Различия подтверждают, что vintage
 следует сохранять в данных и проверять во временной валидации, а не считать
 все годы взаимозаменяемыми. Сопоставление целевых частот приведено на
-**рисунке 3.1** — [«Шестимесячные outcomes по cohort»](../../reports/figures/eda_v01/01_six_month_outcome_rates_by_cohort.png),
-а численные значения — в **таблице 3.1** — [«Сводка шестимесячных outcomes»](../../reports/eda_v01/05_six_month_outcome_summary.csv).
+**рисунке 3.1** — [«Шестимесячные outcomes по cohort»](../../../reports/figures/eda_v01/01_six_month_outcome_rates_by_cohort.png),
+а численные значения — в **таблице 3.1** — [«Сводка шестимесячных outcomes»](../../../reports/eda_v01/05_six_month_outcome_summary.csv).
 
 Описательное распределение текущего статуса также различается: доля loan-month
 со статусом 90+ DPD равна 4,435% для 2008Q1 и 0,263% для 2012Q1. Эти цифры не
 являются оценкой риска на всём рынке США: панели объединяют только выбранные
 vintages и меняют состав кредитов с течением календарного времени. Распределение
-статусов по cohort см. на **рисунке 3.2** — [«Текущий статус просрочки»](../../reports/figures/eda_v01/02_current_delinquency_distribution.png)
-и в **таблице 3.2** — [«Распределение статусов просрочки»](../../reports/eda_v01/04_current_delinquency_distribution.csv).
+статусов по cohort см. на **рисунке 3.2** — [«Текущий статус просрочки»](../../../reports/figures/eda_v01/02_current_delinquency_distribution.png)
+и в **таблице 3.2** — [«Распределение статусов просрочки»](../../../reports/eda_v01/04_current_delinquency_distribution.csv).
 Календарную динамику 30+ и 90+ DPD см. на **рисунке 3.3** —
-[«Календарная динамика просрочки»](../../reports/figures/eda_v01/05_calendar_month_delinquency_trend.png).
+[«Календарная динамика просрочки»](../../../reports/figures/eda_v01/05_calendar_month_delinquency_trend.png).
 Полные таблицы, рисунки и ограничения интерпретации приведены в
-[отчёте этапа 11](11_exploratory_data_analysis_report.md).
+[отчёте этапа 11](../11_exploratory_data_analysis_report.md).

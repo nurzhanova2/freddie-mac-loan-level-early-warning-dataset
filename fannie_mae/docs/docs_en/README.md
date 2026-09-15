@@ -5,13 +5,13 @@ Dataset. They do not apply to the Freddie Mac workstream.
 
 ## Dissertation text
 
-- [Abstract and official topic](00_annotation.md)
-- [Chapter 1. Research concept and design](01_research_design_chapter.md)
-- [Chapter 2. Construction and preparation of the Fannie Mae dataset](02_fannie_mae_data_preparation_chapter.md) — dissertation-style chapter draft.
-- [Chapter 3. Outcomes, features and information-leakage control](03_outcomes_features_leakage_chapter.md)
-- [Chapter 4. Early-warning modelling and temporal validation](04_models_validation_chapter.md)
-- [Chapter 5. Explainability, stability and model-risk governance](05_explainability_governance_chapter.md)
-- [Chapter 6. Results, discussion and conclusions](06_results_discussion_chapter.md)
+- [Abstract and official topic](chapters/00_annotation.md)
+- [Chapter 1. Research concept and design](chapters/01_research_design_chapter.md)
+- [Chapter 2. Construction and preparation of the Fannie Mae dataset](chapters/02_fannie_mae_data_preparation_chapter.md) — dissertation-style chapter draft.
+- [Chapter 3. Outcomes, features and information-leakage control](chapters/03_outcomes_features_leakage_chapter.md)
+- [Chapter 4. Early-warning modelling and temporal validation](chapters/04_models_validation_chapter.md)
+- [Chapter 5. Explainability, stability and model-risk governance](chapters/05_explainability_governance_chapter.md)
+- [Chapter 6. Results, discussion and conclusions](chapters/06_results_discussion_chapter.md)
 
 ## Technical appendices
 

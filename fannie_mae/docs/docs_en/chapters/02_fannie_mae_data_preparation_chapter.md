@@ -47,11 +47,11 @@ The expanded version contains 185,931,842 loan-month records and 3,343,420
 loans in seven separate processed panels. They have not yet been physically
 pooled, preserving the provenance of every acquisition cohort. All seven raw
 archives passed validation. The sample composition and temporal coverage are
-reported in **Table 2.1** — [“Acquisition-cohort coverage”](../../reports/eda_v01/01_cohort_overview.csv).
+reported in **Table 2.1** — [“Acquisition-cohort coverage”](../../../reports/eda_v01/01_cohort_overview.csv).
 Key origination characteristics are reported in **Table 2.2** —
-[“Origination characteristics”](../../reports/eda_v01/03_origination_characteristics.csv).
+[“Origination characteristics”](../../../reports/eda_v01/03_origination_characteristics.csv).
 The visual comparison of FICO and original LTV is in **Figure 2.1** —
-[“Origination characteristics by cohort”](../../reports/figures/eda_v01/03_origination_characteristics_trend.png).
+[“Origination characteristics by cohort”](../../../reports/figures/eda_v01/03_origination_characteristics_trend.png).
 
 ## 2.3. Raw-file quality control
 

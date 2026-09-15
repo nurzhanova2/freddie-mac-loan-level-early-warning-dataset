@@ -19,7 +19,7 @@ leakage делает модель и её объяснения недейств�
 Триггер не должен автоматически запускать надзорное воздействие. Его роль —
 приоритизация проверки: red tier formal adverse top 1% направляется на
 приоритетный review, а amber signals используются для watchlist и мониторинга.
-См. [policy v01](../../config/fannie_suptech_trigger_policy_v01.yml).
+См. [policy v01](../../../config/fannie_suptech_trigger_policy_v01.yml).
 
 ## 5.4. Статус
 
@@ -27,5 +27,5 @@ leakage делает модель и её объяснения недейств�
 показывает среди наиболее значимых признаков original interest rate, текущий
 статус просрочки, FICO, loan age, DTI и LTV/CLTV. Это описывает механизм
 модели, а не причинный эффект. См. **рисунок 5.1** —
-[«Global SHAP formal adverse»](../../reports/figures/models/formal_adverse_6m_xgboost_shap_global_v01.png)
-и **таблицу 5.1** — [«Global SHAP importance»](../../reports/models/formal_adverse_6m_xgboost_shap_global_v01.csv).
+[«Global SHAP formal adverse»](../../../reports/figures/models/formal_adverse_6m_xgboost_shap_global_v01.png)
+и **таблицу 5.1** — [«Global SHAP importance»](../../../reports/models/formal_adverse_6m_xgboost_shap_global_v01.csv).
