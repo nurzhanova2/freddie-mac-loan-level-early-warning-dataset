@@ -1,0 +1,9 @@
+component,metric,value
+Formal adverse XGBoost,ROC-AUC,0.894333
+Formal adverse XGBoost,PR-AUC,0.286618
+Early deterioration XGBoost,ROC-AUC,0.730995
+Early deterioration XGBoost,PR-AUC,0.066271
+Formal adverse top 1% trigger,"Recall, %",50.093985
+Formal adverse top 1% trigger,"Precision, %",24.289837
+Early deterioration top 5% trigger,"Recall, %",18.5868
+Early deterioration top 5% trigger,"Precision, %",8.69125

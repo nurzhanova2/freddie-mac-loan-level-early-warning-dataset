@@ -23,5 +23,7 @@ Dataset. They do not apply to the Freddie Mac workstream.
 - [Stage 12](12_temporal_split_execution_report.md) — chronological train/validation/out-of-time split.
 - [Stage 13](13_initial_models_execution_report.md) — initial logistic baseline models.
 - [Stage 14](14_threshold_policy_execution_report.md) — leading-model calibration and threshold policy.
+- [Stage 15](15_explainability_execution_report.md) — SHAP audit and explanation stability.
+- [Stage 16](16_final_results_execution_report.md) — final results and conclusions.
 
 The technical reports substantiate the chapter; they are not a substitute for it.

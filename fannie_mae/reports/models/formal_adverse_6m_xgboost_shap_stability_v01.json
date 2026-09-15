@@ -1,0 +1,6 @@
+{
+  "target": "formal_adverse_6m",
+  "sample_size_per_period": 5000,
+  "spearman_rank_correlation": 0.994615,
+  "top_10_overlap": 10
+}

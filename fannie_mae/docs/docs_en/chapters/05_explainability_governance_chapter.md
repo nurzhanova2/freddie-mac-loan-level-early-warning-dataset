@@ -14,4 +14,9 @@ The manifest, dictionary, outcome/censoring register, leakage register, temporal
 
 ## 5.4. Status
 
-The audit framework is ready. SHAP/LIME figures and stability measurements will be added after model training.
+Global and local TreeSHAP audits have been completed for both outcomes. For
+formal adverse, leading factors include original interest rate, current
+delinquency status, FICO, loan age, DTI and LTV/CLTV. Temporal rank stability
+is high: Spearman correlation is 0.994615 for formal adverse and 0.984609 for
+early deterioration. The results are documented in the
+[stage-15 report](../15_explainability_execution_report.md).

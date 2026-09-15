@@ -23,5 +23,7 @@
 - [Этап 12](12_temporal_split_execution_report.md) — хронологическое train/validation/out-of-time разделение.
 - [Этап 13](13_initial_models_execution_report.md) — первые логистические baseline-модели.
 - [Этап 14](14_threshold_policy_execution_report.md) — калибровка ведущей модели и политика порогов.
+- [Этап 15](15_explainability_execution_report.md) — SHAP-аудит и устойчивость объяснений.
+- [Этап 16](16_final_results_execution_report.md) — итоговые результаты и выводы.
 
 Технические отчёты подтверждают результаты главы, но не заменяют её.

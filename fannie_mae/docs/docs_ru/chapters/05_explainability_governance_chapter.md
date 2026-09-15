@@ -29,3 +29,8 @@ leakage делает модель и её объяснения недейств�
 модели, а не причинный эффект. См. **рисунок 5.1** —
 [«Global SHAP formal adverse»](../../../reports/figures/models/formal_adverse_6m_xgboost_shap_global_v01.png)
 и **таблицу 5.1** — [«Global SHAP importance»](../../../reports/models/formal_adverse_6m_xgboost_shap_global_v01.csv).
+
+SHAP-аудит выполнен также для early deterioration, а локальные объяснения
+сформированы для Red и Amber alerts. Temporal stability рангов факторов высока:
+0,994615 для formal adverse и 0,984609 для early deterioration. Полный журнал
+см. в [отчёте этапа 15](../15_explainability_execution_report.md).

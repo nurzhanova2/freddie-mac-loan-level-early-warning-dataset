@@ -1,0 +1,16 @@
+target,masked_alert_case_id,alert_month,calibrated_risk_score,feature,shap_value,absolute_shap
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,cat__current_loan_delinquency_status,4.670808,4.670808
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__borrower_credit_score_at_origination,0.59412676,0.59412676
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__remaining_months_to_maturity,0.3069235,0.3069235
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,cat__property_state,-0.3020505,0.3020505
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__original_combined_loan_to_value_ratio_cltv,0.22007981,0.22007981
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__debt_to_income_dti,-0.1745261,0.1745261
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__current_actual_upb,0.17185101,0.17185101
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__original_loan_to_value_ratio_ltv,0.16614683,0.16614683
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__original_upb,0.14084968,0.14084968
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__number_of_borrowers,-0.1366934,0.1366934
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,cat__loan_purpose,-0.12721972,0.12721972
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,cat__channel,0.08591237,0.08591237
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__loan_age,0.0628583,0.0628583
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,num__co_borrower_credit_score_at_origination,0.042884454,0.042884454
+formal_adverse_6m,1f4cf050075e,2021-02-01,0.8333333134651184,cat__modification_flag,-0.04283607,0.04283607

@@ -1,0 +1,5 @@
+model,target,roc_auc,pr_auc,out_of_time_event_rate_pct
+logistic,formal_adverse_6m,0.879389,0.187887,0.4849
+logistic,early_deterioration_6m,0.725425,0.059631,2.338
+xgboost,formal_adverse_6m,0.894333,0.286618,0.4849
+xgboost,early_deterioration_6m,0.730995,0.066271,2.338

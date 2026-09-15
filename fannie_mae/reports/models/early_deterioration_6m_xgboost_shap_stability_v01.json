@@ -1,0 +1,6 @@
+{
+  "target": "early_deterioration_6m",
+  "sample_size_per_period": 5000,
+  "spearman_rank_correlation": 0.984609,
+  "top_10_overlap": 9
+}
