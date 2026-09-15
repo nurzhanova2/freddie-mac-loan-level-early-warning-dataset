@@ -1,0 +1,82 @@
+version: fannie_feature_spec_v01
+purpose: baseline cross-cohort feature set for early-warning models
+unit_of_prediction: loan-month at reporting month t
+applicability:
+  data_source: Fannie Mae Single-Family Primary Dataset
+  cohorts: [2006Q1, 2008Q1, 2012Q1, 2016Q1, 2020Q1, 2022Q1, 2024Q1]
+  do_not_mix_with_freddie_mac: true
+
+temporal_rule: >
+  Every input must be observed at or before the monthly_reporting_period t.
+  Fields recorded after termination or revealing a future outcome are prohibited.
+
+numeric_features:
+  - original_interest_rate
+  - original_upb
+  - original_loan_term
+  - original_loan_to_value_ratio_ltv
+  - original_combined_loan_to_value_ratio_cltv
+  - number_of_borrowers
+  - debt_to_income_dti
+  - borrower_credit_score_at_origination
+  - co_borrower_credit_score_at_origination
+  - mortgage_insurance_percentage
+  - current_interest_rate
+  - current_actual_upb
+  - loan_age
+  - remaining_months_to_legal_maturity
+  - remaining_months_to_maturity
+
+categorical_features:
+  - channel
+  - first_time_home_buyer_indicator
+  - loan_purpose
+  - property_type
+  - number_of_units
+  - occupancy_status
+  - property_state
+  - amortization_type
+  - current_loan_delinquency_status
+  - modification_flag
+
+transformations:
+  numeric:
+    imputation: training-split median only
+    missingness_indicators: true
+    outlier_policy: assess on training split; do not winsorize until documented in a new feature artifact
+  categorical:
+    missing_category: __MISSING__
+    unseen_category_at_validation_or_test: __UNKNOWN__
+    encoding: decided within each fitted training pipeline only
+
+explicit_exclusions:
+  identifiers:
+    - loan_identifier
+  temporal_or_split_metadata:
+    - monthly_reporting_period
+    - origination_date
+    - first_payment_date
+    - maturity_date
+    - acquisition_cohort
+  high_cardinality_or_governance_review:
+    - seller_name
+    - servicer_name
+    - metropolitan_statistical_area_msa_or_metropolitan_statistical_division_area_msda
+    - zip_code_short
+  pending_semantic_and_completeness_review:
+    - loan_payment_history
+  label_or_post_event:
+    - zero_balance_code
+    - zero_balance_effective_date
+    - formal_adverse_3m
+    - formal_adverse_6m
+    - early_deterioration_3m
+    - early_deterioration_6m
+
+outcome_specific_notes:
+  early_deterioration:
+    - baseline risk set requires current_loan_delinquency_status == '00'; therefore this feature is constant within that target's eligible rows
+  formal_adverse:
+    - baseline risk set permits numeric current_loan_delinquency_status 00 through 02
+
+approval_status: baseline_design_fixed_pending_model_pipeline_implementation

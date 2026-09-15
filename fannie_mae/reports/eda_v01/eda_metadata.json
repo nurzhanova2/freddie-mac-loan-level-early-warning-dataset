@@ -1,0 +1,19 @@
+{
+  "version": "fannie_eda_v01",
+  "cohorts": [
+    "2006Q1",
+    "2008Q1",
+    "2012Q1",
+    "2016Q1",
+    "2020Q1",
+    "2022Q1",
+    "2024Q1"
+  ],
+  "unit_of_analysis": "loan-month",
+  "total_loan_month_rows": 185931842,
+  "notes": [
+    "All summaries use processed Fannie Mae panels only.",
+    "Outcome rates use only non-censored eligible observations.",
+    "Calendar trend is compositional across the selected acquisition cohorts and is not a US market-wide rate."
+  ]
+}

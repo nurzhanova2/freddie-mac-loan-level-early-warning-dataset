@@ -1,0 +1,38 @@
+version: fannie_outcome_v01
+source: Fannie Mae Single-Family Loan Performance Primary Dataset, 2008Q1
+unit_of_observation: loan_identifier × monthly_reporting_period
+forecast_horizons_months: [3, 6]
+data_cutoff_observed: 2026-03
+
+formal_adverse_event:
+  definition: first future interpretable Current Loan Delinquency Status from 03 through 98
+  interpretation: 90+ DPD threshold; code 99 and XX are not interpreted as events
+  baseline_risk_set: active loans with current interpretable delinquency status 00, 01, or 02
+  event_priority_over_termination: true
+
+early_deterioration:
+  definition: first future interpretable Current Loan Delinquency Status from 01 through 98
+  interpretation: transition from current status to 30+ DPD
+  baseline_risk_set: active loans with current delinquency status 00
+  event_priority_over_termination: true
+
+censoring:
+  zero_balance_code: censor if observed within horizon before a defined delinquency event
+  incomplete_future_months: censor
+  unknown_future_delinquency_status: censor if no defined event is observed
+  required_complete_months: equal to forecast horizon
+  zero_balance_codes_not_treated_as_default:
+    - "01"
+    - "02"
+    - "03"
+    - "06"
+    - "09"
+    - "15"
+    - "16"
+
+feature_exclusions:
+  - zero_balance_code
+  - zero_balance_effective_date
+  - post_event_foreclosure_disposition_and_recovery_fields
+  - future_information
+

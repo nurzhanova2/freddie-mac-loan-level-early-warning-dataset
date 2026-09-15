@@ -1,0 +1,33 @@
+dataset:
+  provider: Freddie Mac
+  product: Single-Family Loan-Level Dataset
+  segment: Standard Dataset
+  release: "47"
+  release_effective_date: "2026-07"
+  unit_of_observation: loan_id x observation_month
+pilot_input:
+  required_files:
+    - sample_orig_YYYY.txt
+    - sample_perf_YYYY.txt
+  acquisition: Clarity Data Intelligence download
+  note: >-
+    The publicly posted Release 47 example files are schema examples only and
+    are not treated as an analytical sample because their origination and
+    performance loan identifiers do not overlap.
+study_design:
+  prediction_horizons_months: [3, 6]
+  event_observation_cutoff: "2025-09"
+  include_only_complete_future_windows: true
+  outcome_definitions_status: pending_data_validation
+  planned_outcomes:
+    formal_adverse_event: first 90+ DPD, subject to validation against the release guide
+    early_deterioration: current-to-30+ DPD within horizon h, subject to validation
+  exclusions:
+    - Non-Standard Dataset
+    - observations recorded after a defined event
+    - observations without a complete label window, unless an event or censoring rule applies
+governance:
+  source_files_immutable: true
+  temporal_split_fixed_before_modeling: true
+  dataset_version: v01
+  last_updated: "2026-09-14"

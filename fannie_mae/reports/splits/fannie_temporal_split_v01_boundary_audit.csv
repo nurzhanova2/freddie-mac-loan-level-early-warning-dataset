@@ -1,0 +1,4 @@
+split,first_reporting_month,last_reporting_month,candidate_loan_month_rows
+train,2006-01-01,2016-12-01,69577377
+validation,2017-01-01,2020-12-01,38196610
+out_of_time_test,2021-01-01,2025-09-01,70473877

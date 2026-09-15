@@ -1,0 +1,2 @@
+target,capacity_pct,alerted_events_with_observed_event,mean_months_to_event,median_months_to_event,min_months_to_event,max_months_to_event
+early_deterioration_6m,5.0,2833,2.993,3.0,1,6

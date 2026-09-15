@@ -1,0 +1,19 @@
+{
+  "target": "formal_adverse_6m",
+  "calibration_data": "validation natural-rate deterministic 1% sample only",
+  "evaluation_data": "out_of_time_test natural-rate deterministic 1% sample",
+  "validation_rows": 337541,
+  "validation_events": 3732,
+  "out_of_time_test_rows": 658314,
+  "out_of_time_test_events": 3192,
+  "out_of_time_test_uncalibrated": {
+    "roc_auc": 0.879389,
+    "pr_auc": 0.187887,
+    "brier_score": 0.021646
+  },
+  "out_of_time_test_isotonic_calibrated": {
+    "roc_auc": 0.878991,
+    "pr_auc": 0.173858,
+    "brier_score": 0.00432
+  }
+}

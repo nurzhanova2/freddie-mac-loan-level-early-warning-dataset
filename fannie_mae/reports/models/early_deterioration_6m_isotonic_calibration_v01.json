@@ -1,0 +1,19 @@
+{
+  "target": "early_deterioration_6m",
+  "calibration_data": "validation natural-rate deterministic 1% sample only",
+  "evaluation_data": "out_of_time_test natural-rate deterministic 1% sample",
+  "validation_rows": 332693,
+  "validation_events": 10040,
+  "out_of_time_test_rows": 651914,
+  "out_of_time_test_events": 15242,
+  "out_of_time_test_uncalibrated": {
+    "roc_auc": 0.725425,
+    "pr_auc": 0.059631,
+    "brier_score": 0.059429
+  },
+  "out_of_time_test_isotonic_calibrated": {
+    "roc_auc": 0.725132,
+    "pr_auc": 0.058371,
+    "brier_score": 0.022507
+  }
+}

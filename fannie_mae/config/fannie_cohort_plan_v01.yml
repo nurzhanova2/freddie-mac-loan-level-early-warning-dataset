@@ -1,0 +1,62 @@
+version: fannie_cohort_plan_v01
+purpose: dissertation-scale Fannie Mae development sample
+completed_cohorts:
+  selection_rule: selected Q1 acquisition cohorts spanning distinct mortgage-market environments
+  cohorts:
+    - 2006Q1
+    - 2008Q1
+    - 2012Q1
+    - 2016Q1
+    - 2020Q1
+    - 2022Q1
+    - 2024Q1
+  status: validated_cleaned_panelled_labelled
+  role: stage_10_completed_development_sample
+
+recommended_main_extension:
+  selection_rule: one acquisition cohort, Q1, for each year from 2006 through 2024
+  rationale:
+    - includes pre-crisis, crisis, post-crisis, pandemic, and recent origination environments
+    - avoids the unnecessary volume of all quarterly cohorts in the first dissertation iteration
+    - uses a reproducible selection rule rather than convenience sampling
+  planned_cohorts:
+    - 2006Q1
+    - 2007Q1
+    - 2008Q1
+    - 2009Q1
+    - 2010Q1
+    - 2011Q1
+    - 2012Q1
+    - 2013Q1
+    - 2014Q1
+    - 2015Q1
+    - 2016Q1
+    - 2017Q1
+    - 2018Q1
+    - 2019Q1
+    - 2020Q1
+    - 2021Q1
+    - 2022Q1
+    - 2023Q1
+    - 2024Q1
+
+download_priority_after_pilot:
+  - 2007Q1
+  - 2009Q1
+  - 2010Q1
+  - 2011Q1
+  - 2013Q1
+  - 2014Q1
+  - 2015Q1
+  - 2017Q1
+  - 2018Q1
+  - 2019Q1
+  - 2021Q1
+  - 2023Q1
+
+restrictions:
+  - do_not_mix_with_freddie_mac: true
+  - apply_identical_glossary_mapping_and_outcome_spec: true
+  - preserve_each_raw_archive_immutable: true
+  - record_each_archive_in_manifest: true
+  - treat_post_2025_09_as_ineligible_for_non_event_six_month_labels_if_data_cutoff_is_2026_03

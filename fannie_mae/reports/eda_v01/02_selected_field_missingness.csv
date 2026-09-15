@@ -1,0 +1,8 @@
+acquisition_cohort,loan_month_rows,credit_score_missing_pct,dti_missing_pct,ltv_missing_pct,current_upb_missing_pct,delinquency_status_missing_pct,payment_history_missing_pct,state_missing_pct
+2006Q1,18198237,0.588,2.977,0.0,0.0,0.0,96.117,0.0
+2008Q1,22415219,0.181,3.046,0.0,0.0,0.0,94.853,0.0
+2012Q1,50416530,0.229,0.022,0.0,0.0,0.0,81.045,0.0
+2016Q1,26176557,0.377,0.029,0.0,0.0,0.0,64.771,0.0
+2020Q1,27521067,0.996,0.005,0.0,0.0,0.0,1.554,0.0
+2022Q1,36774217,1.864,0.012,0.0,0.0,0.0,0.353,0.0
+2024Q1,4430015,3.416,0.004,0.0,0.0,0.0,1.083,0.0

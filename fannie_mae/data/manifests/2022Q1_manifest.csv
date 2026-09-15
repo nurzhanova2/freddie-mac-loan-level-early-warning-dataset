@@ -1,0 +1,2 @@
+manifest_date,relative_path,source,bytes,sha256,zip_member,uncompressed_bytes,rows,status
+2026-09-15,fannie_mae/data/raw/2022Q1/2022Q1.zip,"Fannie Mae Data Dynamics, Single-Family Loan Performance Primary Dataset",878051073,6408d9d04b2ccd9713ff76dc186771c38c53cca4f79aa1adcdc6e1a541bda90f,2022Q1.csv,11838365963,36774217,pass

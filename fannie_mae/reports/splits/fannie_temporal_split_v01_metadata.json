@@ -1,0 +1,49 @@
+{
+  "version": "fannie_temporal_split_v01",
+  "primary_horizon_months": 6,
+  "reporting_data_cutoff": "2026-03-01",
+  "strict_out_of_time_last_prediction_month": "2025-09-01",
+  "cohorts": [
+    "2006Q1",
+    "2008Q1",
+    "2012Q1",
+    "2016Q1",
+    "2020Q1",
+    "2022Q1",
+    "2024Q1"
+  ],
+  "model_features_verified_available": [
+    "original_interest_rate",
+    "original_upb",
+    "original_loan_term",
+    "original_loan_to_value_ratio_ltv",
+    "original_combined_loan_to_value_ratio_cltv",
+    "number_of_borrowers",
+    "debt_to_income_dti",
+    "borrower_credit_score_at_origination",
+    "co_borrower_credit_score_at_origination",
+    "mortgage_insurance_percentage",
+    "current_interest_rate",
+    "current_actual_upb",
+    "loan_age",
+    "remaining_months_to_legal_maturity",
+    "remaining_months_to_maturity",
+    "channel",
+    "first_time_home_buyer_indicator",
+    "loan_purpose",
+    "property_type",
+    "number_of_units",
+    "occupancy_status",
+    "property_state",
+    "amortization_type",
+    "current_loan_delinquency_status",
+    "modification_flag"
+  ],
+  "notes": [
+    "No duplicate model-ready parquet was materialised; the split is a reproducible rule over processed panels.",
+    "Rows with a null target are excluded from target-specific fitting and evaluation.",
+    "The split is chronological; loan identifiers are not model features."
+  ],
+  "boundary_audit": "fannie_temporal_split_v01_boundary_audit.csv",
+  "model_input_contract": "fannie_mae/sql/fannie_model_input_v01.sql"
+}

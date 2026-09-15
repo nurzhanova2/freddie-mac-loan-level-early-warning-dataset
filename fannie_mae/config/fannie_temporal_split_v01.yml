@@ -1,0 +1,40 @@
+version: fannie_temporal_split_v01
+purpose: chronological development, validation, and out-of-time evaluation
+primary_horizon_months: 6
+data_reporting_cutoff: 2026-03-01
+unit_of_split: loan-month observation at monthly_reporting_period t
+
+splits:
+  train:
+    start: 2006-01-01
+    end: 2016-12-01
+  validation:
+    start: 2017-01-01
+    end: 2020-12-01
+  out_of_time_test:
+    start: 2021-01-01
+    end: 2025-09-01
+
+eligibility:
+  require_non_null_target: true
+  targets:
+    - formal_adverse_6m
+    - early_deterioration_6m
+  six_month_cutoff_rule: >
+    A non-event prediction date later than 2025-09-01 cannot have a fully
+    observed six-month future window in data ending 2026-03-01, so it is
+    excluded from the strict six-month evaluation frame.
+
+anti_leakage_rules:
+  - no_random_row_split
+  - no_use_of_future_reporting_months_for_training_preprocessing
+  - fit_imputation_encoding_feature_selection_class_weighting_and_calibration_on_train_only
+  - retain_loan_identifier_only_for_join_and_audit_never_as_model_feature
+  - repeated_observations_of_a_loan_across_time_are_allowed_because_this_is_a_dynamic_monitoring_design
+
+cohort_handling:
+  retain_for_audit_and_stratified_reporting: true
+  exclude_from_baseline_model_feature_set: true
+  reason: a future acquisition vintage may be absent during model fitting
+
+status: fixed_after_data_cutoff_and_outcome_v01

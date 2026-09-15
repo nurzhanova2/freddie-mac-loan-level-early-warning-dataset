@@ -1,0 +1,2 @@
+target,capacity_pct,alerted_events_with_observed_event,mean_months_to_event,median_months_to_event,min_months_to_event,max_months_to_event
+formal_adverse_6m,1.0,1599,2.467,2.0,1,6

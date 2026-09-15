@@ -1,0 +1,17 @@
+# Source data may be subject to the providers' distribution restrictions.
+freddie_mac/data/raw/
+freddie_mac/data/interim/
+freddie_mac/data/processed/
+freddie_mac/reports/*.json
+freddie_mac/src/__pycache__/
+fannie_mae/data/raw/
+fannie_mae/data/interim/
+fannie_mae/data/processed/
+fannie_mae/data/model_samples_v01/
+fannie_mae/reports/*.json
+fannie_mae/src/__pycache__/
+.tmp/
+!freddie_mac/data/manifests/
+!freddie_mac/data/manifests/*.csv
+!fannie_mae/data/manifests/
+!fannie_mae/data/manifests/*.csv

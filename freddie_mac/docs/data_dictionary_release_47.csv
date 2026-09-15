@@ -1,0 +1,67 @@
+dataset_component,field_position,official_attribute_name,technical_type_format,max_length,source_release,predictor_eligibility,availability_status,notes
+origination,1,Classic FICO®,Numeric,4,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,2,First Payment Date,Date,6,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,3,First Time Homebuyer Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,4,Maturity Date,Date,6,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,5,Metropolitan Statistical Area (MSA) Or Metropolitan Division,Numeric,5,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,6,Mortgage Insurance Percentage (MI %),Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,7,Number of Units,Numeric,2,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,8,Occupancy Status,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,9,Original Combined Loan-to-Value (CLTV),Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,10,Original Debt-to-Income (DTI) Ratio,Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,11,Original UPB,Numeric,12,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,12,Original Loan-to-Value (LTV),Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,13,Original Interest Rate,"Numeric - 6,3",6,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,14,Channel,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,15,Prepayment Penalty Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,16,Amortization Type,Alpha,5,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,17,Property State,Alpha,2,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,18,Property Type,Alpha,2,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,19,Postal Code,Alpha,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,20,Loan Identifier,Alpha Numeric - PYYQnXXXXXXX,12,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,21,Loan Purpose,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,22,Original Loan Term,Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,23,Number of Borrowers,Numeric,2,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,24,Seller Name,Alpha Numeric,60,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,25,Super Conforming Flag,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,26,Pre-HARP Loan Sequence Number,Alpha Numeric - PYYQnXXXXXXX,12,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,27,Special Eligibility Program,Alpha Numeric,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,28,HARP Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,29,Property Valuation Method,Numeric,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,30,Interest Only (I/O) Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+origination,31,VantageScore® 4.0,Numeric,4,Freddie Mac SFLLD Release 47 (July 2026),candidate,at_origination,Eligibility must be finalised by the leakage register.
+monthly_performance,1,Loan Identifier,Alpha Numeric - PYYQnXXXXXXX,12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,2,Period,Date,6,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,3,Current Actual UPB,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,4,Current Loan Delinquency Status,Alpha Numeric,3,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,5,Loan Age,Numeric ,3,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,6,Remaining Months to Legal Maturity,Numeric ,3,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,7,Underwriting Defect and Major Servicing Defect Settlement Date,Date,6,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,8,Modification Flag,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,9,Zero Balance Code,Numeric,2,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,10,Zero Balance Effective Date,Date,6,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,11,Current Interest Rate,"Numeric - 8,3",8,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,12,Current Non-Interest Bearing UPB,Numeric,12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,13,Due Date of Last Paid Installment (DDLPI),Date,6,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,14,MI Recoveries,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,15,Net Sales Proceeds,Alpha-Numeric ,14,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,16,Non MI Recoveries,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,17,Total Expenses,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,18,Legal Costs,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,19,Maintenance and Preservation Costs,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,20,Taxes and Insurance,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,21,Miscellaneous Expenses,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,22,Actual Loss,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,23,Cumulative Modification Costs,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,24,Interest Rate Step Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,25,Payment Deferral Flag,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,26,Estimated Loan-to-Value (ELTV),Numeric,4,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,27,Zero Balance Removal UPB,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,28,Delinquent Accrued Interest,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,29,Delinquency Due to Disaster,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,30,Borrower Assistance Plan,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,31,Current Period Modification Costs,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,32,Current Interest Bearing UPB,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,33,Mortgage Insurance Cancellation Indicator,Alpha,1,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,34,Servicer Name,Alpha Numeric,60,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.
+monthly_performance,35,Bankruptcy Cramdown Costs,"Numeric - 12,2",12,Freddie Mac SFLLD Release 47 (July 2026),review_required,monthly_reporting_period,Eligibility must be finalised by the leakage register.

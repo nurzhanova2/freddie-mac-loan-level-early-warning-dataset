@@ -1,0 +1,32 @@
+dataset:
+  provider: Fannie Mae
+  product: Single-Family Loan Performance Primary Dataset
+  acquisition_cohort: "2008Q1"
+  raw_archive: data/raw/2008Q1/2008Q1.zip
+  raw_member: 2008Q1.csv
+  unit_of_observation: loan_id x observation_month
+population:
+  description: >-
+    A disclosed subset of Fannie Mae single-family, conventional, fixed-rate,
+    fully amortizing, full-documentation mortgage loans of 30 years or less.
+  exclusions_in_source_population:
+    - adjustable-rate mortgages
+    - balloon mortgages
+    - interest-only mortgages
+    - mortgages with prepayment penalties
+    - government-insured mortgages
+    - HARP and Refi Plus mortgages
+time_design:
+  prediction_horizons_months: [3, 6]
+  performance_cutoff: "2026-03"
+  include_only_complete_future_windows: true
+outcomes:
+  status: not_yet_constructed
+  planned_formal_event: first 90+ DPD, pending glossary validation
+  planned_early_deterioration: current to 30+ DPD within horizon h, pending glossary validation
+governance:
+  raw_archive_immutable: true
+  no_combining_with_freddie_mac: true
+  temporal_split_fixed_before_modeling: true
+  dataset_version: fannie_v01
+  updated: "2026-09-14"

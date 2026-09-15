@@ -1,0 +1,26 @@
+# Only values explicitly documented as Not Available/Unknown in the Release 47
+# General User Guide are converted to null during standardisation.
+null_codes:
+  classic_fico: ["9999"]
+  vantagescore_4_0: ["9999"]
+  original_combined_loan_to_value_cltv: ["999"]
+  original_debt_to_income_dti_ratio: ["999"]
+  original_loan_to_value_ltv: ["999"]
+  mortgage_insurance_percentage_mi: ["999"]
+  number_of_units: ["99"]
+  number_of_borrowers: ["99"]
+  property_valuation_method: ["7"]
+  first_time_homebuyer_indicator: ["9"]
+  occupancy_status: ["9"]
+  property_type: ["99"]
+  loan_purpose: ["9"]
+  postal_code: ["000"]
+  current_loan_delinquency_status: ["XX"]
+  estimated_loan_to_value_eltv: ["999"]
+date_columns:
+  origination: [first_payment_date, maturity_date]
+  monthly_performance:
+    - period
+    - underwriting_defect_and_major_servicing_defect_settlement_date
+    - zero_balance_effective_date
+    - due_date_of_last_paid_installment_ddlpi

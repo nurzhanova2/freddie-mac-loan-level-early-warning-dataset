@@ -1,0 +1,4 @@
+manifest_date,relative_path,source_url,release,coverage,bytes,sha256,row_count,status
+2026-09-14,docs/sources/general_user_guide_july_2026.pdf,https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset,"Release 47, July 2026",Official technical documentation,388038,4693ae754109c213feb84e97702fa675ed3926c2a5f4b6f7ba3c347db2aaf03e,not_applicable,downloaded
+2026-09-14,docs/sources/file_layout_july_2026.xlsx,https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset,"Release 47, July 2026",Official technical documentation,13597,ce054271c42b7ad5f173a045c73368d997a2ac99253dcb312a45ccef43a4b13e,not_applicable,downloaded
+2026-09-14,docs/sources/file_headers_july_2026.zip,https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset,"Release 47, July 2026",Official technical documentation,1217,db1390531ca9ea9ce11de2b2e1f42114dba5461d7e10a0eb508a4f464ff9e25a,not_applicable,downloaded

@@ -1,0 +1,39 @@
+version: fannie_suptech_trigger_policy_v01
+status: research_prototype_policy_not_production_supervision
+scope: Fannie Mae single-family mortgage loan-month early warning
+governance_principle: automated scores prioritise human review; they do not determine sanctions, credit denial, or intervention autonomously
+
+formal_adverse_6m:
+  leading_model: calibrated_xgboost_v01
+  primary_policy:
+    alert_capacity_percent: 1
+    tier: red_priority_review
+    observed_out_of_time_precision_percent: 24.29
+    observed_out_of_time_recall_percent: 50.09
+    action: prioritise loan or portfolio review and attach a local explanation
+  secondary_policy:
+    alert_capacity_percent: 5
+    tier: amber_watchlist
+    observed_out_of_time_precision_percent: 6.18
+    observed_out_of_time_recall_percent: 63.75
+    action: monitor aggregate trend; do not treat as an automatic individual action
+
+early_deterioration_6m:
+  leading_model: calibrated_xgboost_v01
+  primary_policy:
+    alert_capacity_percent: 5
+    tier: amber_monitoring_signal
+    observed_out_of_time_precision_percent: 8.69
+    observed_out_of_time_recall_percent: 18.59
+    action: add to proactive monitoring; require human contextual review
+  sensitivity_policy:
+    alert_capacity_percent: 10
+    tier: broad_monitoring
+    observed_out_of_time_precision_percent: 7.30
+    observed_out_of_time_recall_percent: 31.20
+    action: use only where monitoring capacity permits
+
+prohibited_uses:
+  - autonomous_supervisory_or_enforcement_action
+  - causal_interpretation_of_model_explanations
+  - inference_about_borrowers_outside_the_documented_mortgage_sample
