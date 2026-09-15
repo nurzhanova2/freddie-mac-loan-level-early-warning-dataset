@@ -5,14 +5,26 @@
 **“Explainable artificial intelligence for early detection of credit risk and
 hidden deterioration in borrower quality.”**
 
-## Practical result
+## Abstract
 
-The practical result is a prototype of an explainable mortgage-credit
-early-warning information system developed in accordance with SupTech
-principles. The system transforms characteristics available at the prediction
-date into a deterioration-risk estimate, an interpretation of risk drivers, and
-a signal for prioritising expert review.
+This study examines whether loan-level information available at a reporting
+month can identify subsequent deterioration in mortgage credit quality before a
+formal adverse event is observed. The empirical analysis uses the Fannie Mae
+Single-Family Loan Performance Primary Dataset and treats a loan-month as the
+unit of analysis. Model development, calibration, and final assessment are
+separated chronologically, so that predictions are evaluated on later,
+previously unseen periods and future information is excluded from the features.
 
-The scientific contribution consists in a reproducible approach to early risk
-detection and hidden mortgage-credit deterioration using explainable artificial
-intelligence, temporal validation, and information-leakage control.
+Two six-month outcomes are examined: formal adverse status, defined by a future
+90+ days-past-due status, and early deterioration, defined as a transition from
+a current status to 30+ days past due. Logistic regression provides an
+interpretable benchmark and XGBoost a nonlinear comparison. Alongside
+discrimination metrics, the study evaluates probability calibration,
+capacity-constrained alert thresholds, and lead time. TreeSHAP describes the
+model's reliance on observed variables and is not interpreted causally.
+
+Within the selected Fannie Mae cohorts, XGBoost achieves higher out-of-time
+discrimination than the logistic benchmark. The resulting analytical prototype
+produces a risk estimate, an explanation of the prediction, and an alert tier
+to prioritise expert review; it is not an autonomous credit or supervisory
+decision system.

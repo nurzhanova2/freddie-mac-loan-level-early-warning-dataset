@@ -2,32 +2,42 @@
 
 ## 1.1. Research problem
 
-The dissertation develops an explainable early-warning system for mortgage-credit
-deterioration before formal default. The system is conceptualised as an
-information-analytical prototype developed in accordance with SupTech
-principles. The object of study is an individual mortgage loan in the U.S.
-single-family segment.
+Mortgage-credit deterioration may become observable in monthly servicing data
+before it reaches the 90+ days-past-due threshold used here as a formal adverse
+outcome. The research problem is therefore to distinguish, using only
+information available at a given reporting month, loan-month observations that
+require earlier expert attention. The study addresses this problem through an
+explainable loan-level predictive model for the U.S. single-family mortgage
+segment.
 
-## 1.2. Aim, subject and hypothesis
+## 1.2. Aim, subject and working hypothesis
 
-The aim is to develop and validate a reproducible loan-level risk-prediction
-system that turns observations into an early warning score, explanation, and
-trigger for a human supervisory decision. The subject is future deterioration
-using information available at the observation date. The working hypothesis is
-that a temporally valid loan-month model can provide useful early warning, while
-SHAP/LIME support decision audit but do not establish causality.
+The aim is to develop and evaluate a reproducible procedure for estimating the
+risk of subsequent mortgage-credit deterioration. Its subject is the
+relationship between information available at the observation date and a future
+six-month deterioration outcome. The working hypothesis is that a model
+validated on later periods can provide practically informative early-warning
+signals. Explanation methods are used to audit the model's associations with
+input variables; they do not identify causal mechanisms.
 
 ## 1.3. Research design
 
-The prototype architecture is:
+The analytical sequence links the research objective to a review process:
 
-`data → early-warning score → deterioration detection → explanation → risk trigger → human supervisory decision`.
+`data → risk estimate → deterioration signal → explanation → alert tier → expert review`.
 
-Performance is assessed using discrimination, calibration, lead time, false
-alarms, stability and out-of-time validation. Fannie Mae and Freddie Mac remain
-independent workstreams; the current cycle contains seven Q1 acquisition cohorts
-from the Fannie Mae Primary Dataset. The sources are never pooled.
+The sequence separates prediction from decision-making. A model score ranks
+observations by estimated risk, while a pre-specified threshold determines
+which observations are presented for review. Performance is assessed through
+discrimination, probability calibration, alert precision and recall, lead time,
+and temporal stability. The Fannie Mae and Freddie Mac sources are maintained
+as separate empirical workstreams because their field definitions and data
+generation processes are not assumed to be interchangeable.
 
 ## 1.4. Dissertation structure
 
-Chapter 2 describes data; Chapter 3 specifies outcomes, features and leakage; Chapter 4 addresses modelling and validation; Chapter 5 addresses explainability and governance; Chapter 6 reports results, limitations and conclusions.
+Chapter 2 establishes the empirical sample and data-quality controls. Chapter
+3 defines the outcomes, admissible predictors, and information-leakage rules.
+Chapter 4 describes modelling, calibration, and temporal validation. Chapter
+5 examines explainability and model governance. Chapter 6 interprets the
+results within the scope and limitations of the study.
