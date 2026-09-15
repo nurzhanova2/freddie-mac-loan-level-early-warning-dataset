@@ -2,13 +2,11 @@
 
 ## 1.1. Research problem
 
-The dissertation develops an **explainable SupTech-inspired early-warning
-system for mortgage-credit deterioration** before formal default. The object is
-an individual mortgage loan in the U.S. single-family segment, not a universal
-person-level borrower model. SupTech-inspired means that the research emulates
-supervisory analytics logic; it does not claim deployment by a central bank.
-The official dissertation title remains unchanged; its relation to the
-practical result is stated in the [abstract](00_annotation.md).
+The dissertation develops an explainable early-warning system for mortgage-credit
+deterioration before formal default. The system is conceptualised as an
+information-analytical prototype developed in accordance with SupTech
+principles. The object of study is an individual mortgage loan in the U.S.
+single-family segment.
 
 ## 1.2. Aim, subject and hypothesis
 
