@@ -1,0 +1,3 @@
+target,model,alert_capacity_pct,alerted_events_with_observed_event,mean_months_to_event,median_months_to_event,min_months_to_event,max_months_to_event
+early_deterioration_6m,logistic,5.0,16095,3.02,3.0,1,6
+early_deterioration_6m,xgboost,5.0,16125,3.016,3.0,1,6

@@ -1,0 +1,20 @@
+{
+  "target": "early_deterioration_6m",
+  "training_sampling": "case-control; probability calibration deferred until model comparison is complete",
+  "validation": {
+    "rows": 1022461,
+    "events": 28089,
+    "event_rate_pct": 2.7472,
+    "roc_auc": 0.756645,
+    "pr_auc": 0.098668,
+    "brier_uncalibrated": 0.05723
+  },
+  "out_of_time_test": {
+    "rows": 1732763,
+    "events": 37013,
+    "event_rate_pct": 2.1361,
+    "roc_auc": 0.743762,
+    "pr_auc": 0.07055,
+    "brier_uncalibrated": 0.053791
+  }
+}

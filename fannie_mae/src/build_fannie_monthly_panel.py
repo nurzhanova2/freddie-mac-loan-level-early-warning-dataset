@@ -123,7 +123,7 @@ def main() -> None:
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--glossary", required=True, type=Path)
     parser.add_argument("--dictionary", required=True, type=Path)
-    parser.add_argument("--cleaned", required=True, type=Path)
+    parser.add_argument("--cleaned", type=Path, help="Optional full 113-field cleaned parquet; omit for compact analytical processing.")
     parser.add_argument("--panel", required=True, type=Path)
     parser.add_argument("--event-metadata", required=True, type=Path)
     parser.add_argument("--report", required=True, type=Path)
@@ -141,16 +141,20 @@ def main() -> None:
     if missing_configured:
         raise ValueError("Configured fields absent from glossary: {}".format(sorted(missing_configured)))
 
-    for path in (args.cleaned, args.panel, args.event_metadata, args.report):
+    output_paths = [args.panel, args.event_metadata, args.report]
+    if args.cleaned is not None:
+        output_paths.append(args.cleaned)
+    for path in output_paths:
         path.parent.mkdir(parents=True, exist_ok=True)
     cleaned_schema = schema(field_names, date_fields, numeric_fields)
     panel_schema = schema(PANEL_FIELDS, date_fields, numeric_fields)
     event_schema = schema(EVENT_FIELDS, date_fields, numeric_fields)
-    writers = [
-        pq.ParquetWriter(args.cleaned, cleaned_schema, compression="zstd"),
-        pq.ParquetWriter(args.panel, panel_schema, compression="zstd"),
-        pq.ParquetWriter(args.event_metadata, event_schema, compression="zstd"),
-    ]
+    cleaned_writer = (
+        pq.ParquetWriter(args.cleaned, cleaned_schema, compression="zstd")
+        if args.cleaned is not None else None
+    )
+    panel_writer = pq.ParquetWriter(args.panel, panel_schema, compression="zstd")
+    event_writer = pq.ParquetWriter(args.event_metadata, event_schema, compression="zstd")
     blank_values = row_count = 0
     invalid_dates: Counter[str] = Counter()
     invalid_numerics: Counter[str] = Counter()
@@ -177,12 +181,15 @@ def main() -> None:
                 converted = pd.to_numeric(chunk[column], errors="coerce")
                 invalid_numerics[column] += int((before & converted.isna()).sum())
                 chunk[column] = converted
-            writers[0].write_table(table(chunk, cleaned_schema))
-            writers[1].write_table(table(chunk[PANEL_FIELDS], panel_schema))
-            writers[2].write_table(table(chunk[EVENT_FIELDS], event_schema))
+            if cleaned_writer is not None:
+                cleaned_writer.write_table(table(chunk, cleaned_schema))
+            panel_writer.write_table(table(chunk[PANEL_FIELDS], panel_schema))
+            event_writer.write_table(table(chunk[EVENT_FIELDS], event_schema))
     finally:
-        for writer in writers:
-            writer.close()
+        if cleaned_writer is not None:
+            cleaned_writer.close()
+        panel_writer.close()
+        event_writer.close()
 
     report = {
         "rows_written": row_count,
@@ -193,6 +200,7 @@ def main() -> None:
         "mapped_raw_positions": [1, EXPECTED_COLUMNS],
         "glossary_position_not_present_in_raw_archive": [114] if all_glossary_positions > EXPECTED_COLUMNS else [],
         "dictionary_path": args.dictionary.as_posix(),
+        "full_cleaned_parquet_written": args.cleaned is not None,
         "blank_values_converted_to_null": blank_values,
         "cleaning_rule": "Whitespace and blank strings converted to null; official field names and types imported from the Fannie Mae glossary; special codes are not recoded.",
         "invalid_dates_converted_to_null": dict(sorted(invalid_dates.items())),
@@ -207,4 +215,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

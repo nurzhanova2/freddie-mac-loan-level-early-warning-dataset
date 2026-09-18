@@ -1,0 +1,25 @@
+{
+  "version": "fannie_q1_q3_robustness_v01",
+  "q1_cohorts": [
+    "2006Q1",
+    "2008Q1",
+    "2012Q1",
+    "2016Q1",
+    "2020Q1",
+    "2022Q1",
+    "2024Q1"
+  ],
+  "q3_cohorts": [
+    "2006Q3",
+    "2008Q3",
+    "2012Q3",
+    "2014Q3",
+    "2016Q3",
+    "2018Q3",
+    "2020Q3",
+    "2022Q3",
+    "2024Q3"
+  ],
+  "unit_of_analysis": "loan-month",
+  "interpretation": "Descriptive comparison only. Differences between Q1 and Q3 cohorts may reflect composition, calendar conditions, and origination-quarter effects; they are not causal estimates."
+}

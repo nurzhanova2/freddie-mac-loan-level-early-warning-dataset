@@ -4,7 +4,9 @@
 
 The empirical comparison uses logistic regression and XGBoost. Logistic
 regression provides a transparent reference against which the incremental value
-of nonlinear interactions can be assessed. XGBoost is included because the
+of nonlinear interactions can be assessed; this benchmark design follows the
+empirical comparison tradition in credit scoring [51]. XGBoost is included as
+a scalable gradient-boosting implementation [61] because the
 relationship between loan characteristics, payment status, and subsequent
 deterioration need not be linear. The study does not interpret superior
 predictive performance as evidence of a causal relationship between a feature
@@ -19,6 +21,8 @@ the independent out-of-time test. September 2025 is the latest admissible
 prediction month because the source ends in March 2026 and a complete
 six-month outcome window is required. The design is shown in **Figure 4.1** —
 [“Chronological split”](../../../reports/figures/splits/fannie_temporal_split_timeline_v01.png).
+Temporal rather than random splitting is consistent with dynamic credit-scoring
+approaches [6], [53].
 
 All transformations, feature selection, sampling decisions, and calibration
 mapping are estimated without access to the out-of-time period. The loan
@@ -34,11 +38,30 @@ ROC-AUC and PR-AUC assess ranking performance, whereas calibration assesses
 whether predicted probabilities correspond to observed frequencies. For a binary
 outcome $y_i \in \{0,1\}$, the Brier score is
 $\operatorname{BS}=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{p}_i)^2$; lower values
-indicate smaller squared probability errors. Alert thresholds are additionally
-evaluated by precision, recall, false-positive burden, and lead time, since a
-high-ranking model is not by itself sufficient to define a review policy.
+indicate smaller squared probability errors [62]. Alert thresholds are
+additionally evaluated by precision, recall, false-positive burden, and lead
+time, since a high-ranking model is not by itself sufficient to define a review
+policy.
 
-## 4.4. Empirical model results
+## 4.4. Data volume and actual training samples
+
+The extended Q1+Q3 workstream contains 467,638,404 loan-month observations and
+8,272,539 loans counted across separate cohort panels. The full data volume is
+used for panel construction, outcome derivation, descriptive analysis, and the
+creation of deterministic samples; it is not loaded into memory as one training
+matrix.
+
+For formal adverse status, the case-control training sample contains 1,262,399
+observations, including 420,588 events; the validation and independent
+out-of-time samples contain 1,034,605 and 1,748,449 observations at natural
+event rates. For early deterioration, the corresponding volumes are 1,240,046
+(396,152 events), 1,022,461, and 1,732,763 observations. Samples are formed
+through a reproducible deterministic hash rule; calibration uses validation
+only, and final assessment uses the out-of-time period only. Separate
+estimation and calibration of probabilities are important because good ranking
+alone does not guarantee a valid probability interpretation [63].
+
+## 4.5. Empirical model results
 
 The logistic benchmark obtains out-of-time ROC-AUC values of 0.8794 for formal
 adverse status and 0.7254 for early deterioration. Isotonic calibration reduces
@@ -48,6 +71,8 @@ calibrated linear reference rather than a final model selection. They are
 reported in **Table 4.2** — [“Logistic baseline”](../../../reports/models/logistic_baseline_v01_summary.csv),
 **Table 4.3** — [“Calibration summary”](../../../reports/models/logistic_isotonic_calibration_v01_summary.csv),
 and **Figure 4.2** — [“Formal-adverse reliability”](../../../reports/figures/models/formal_adverse_6m_calibration_v01.png).
+Calibration for early deterioration is shown in **Figure 4.3** —
+[“Early-deterioration reliability”](../../../reports/figures/models/early_deterioration_6m_calibration_v01.png).
 
 On the independent out-of-time period, XGBoost yields ROC-AUC of 0.8943 and
 PR-AUC of 0.2866 for formal adverse status, and 0.7310 and 0.0663 for early

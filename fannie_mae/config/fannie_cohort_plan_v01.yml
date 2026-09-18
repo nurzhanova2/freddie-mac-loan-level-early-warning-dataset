@@ -13,6 +13,30 @@ completed_cohorts:
   status: validated_cleaned_panelled_labelled
   role: stage_10_completed_development_sample
 
+q3_robustness_extension:
+  selection_rule: available Q3 acquisition cohorts used to assess origination-quarter robustness separately from the completed Q1 development sample
+  cohorts:
+    - 2006Q3
+    - 2008Q3
+    - 2012Q3
+    - 2014Q3
+    - 2016Q3
+    - 2018Q3
+    - 2020Q3
+    - 2022Q3
+    - 2024Q3
+  stated_regime_cohorts:
+    2008Q3: acute financial-crisis period
+    2012Q3: post-crisis recovery period
+    2020Q3: pandemic-period origination cohort
+    2022Q3: rising-interest-rate period
+    2024Q3: recent market period
+  status: stage_17_raw_archive_audit_completed
+  role: independent robustness and origination-quarter assessment; not part of the completed v01 model-development sample
+  excluded_requested_cohort:
+    cohort: 2020Q2
+    reason: raw archive is not present in data/raw; 2020Q3 is available and audited as the available pandemic-period Q3 cohort
+
 recommended_main_extension:
   selection_rule: one acquisition cohort, Q1, for each year from 2006 through 2024
   rationale:

@@ -1,0 +1,19 @@
+{
+  "target": "early_deterioration_6m",
+  "model_type": "lightgbm",
+  "training_sampling": "case-control; calibration is fitted on validation only",
+  "validation": {
+    "rows": 1022461,
+    "events": 28089,
+    "roc_auc": 0.756038,
+    "pr_auc": 0.09816,
+    "brier_uncalibrated": 0.056798
+  },
+  "out_of_time_test": {
+    "rows": 1732763,
+    "events": 37013,
+    "roc_auc": 0.744022,
+    "pr_auc": 0.071047,
+    "brier_uncalibrated": 0.052938
+  }
+}

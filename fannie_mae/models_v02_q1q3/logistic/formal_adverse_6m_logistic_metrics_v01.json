@@ -1,0 +1,20 @@
+{
+  "target": "formal_adverse_6m",
+  "training_sampling": "case-control; probability calibration deferred to stage 14",
+  "validation": {
+    "rows": 1034605,
+    "events": 9343,
+    "event_rate_pct": 0.903,
+    "roc_auc": 0.870427,
+    "pr_auc": 0.216698,
+    "brier_uncalibrated": 0.020389
+  },
+  "out_of_time_test": {
+    "rows": 1748449,
+    "events": 7738,
+    "event_rate_pct": 0.4426,
+    "roc_auc": 0.89605,
+    "pr_auc": 0.218122,
+    "brier_uncalibrated": 0.019388
+  }
+}

@@ -3,7 +3,7 @@
 ## 2.1. Data source and empirical scope
 
 The empirical basis is the Fannie Mae Single-Family Loan Performance Primary
-Dataset, distributed through the Data Dynamics platform. It contains
+Dataset, distributed through the Data Dynamics platform [57]. It contains
 origination characteristics and subsequent monthly mortgage-performance
 records. The present study covers the `2006Q1`, `2008Q1`, `2012Q1`, `2016Q1`,
 `2020Q1`, `2022Q1`, and `2024Q1` acquisition cohorts. The analysis is confined
@@ -68,9 +68,22 @@ outcomes and variables admissible for prediction.
 
 ## 2.5. Scope of the prepared sample
 
-The selected cohorts broaden temporal coverage but do not constitute a complete
-annual sample. Cohort identity is retained in downstream analysis to preserve
-provenance and to permit examination of vintage heterogeneity. Further cohorts
-can be processed using the same versioned rules; their inclusion should be
-reported as an extension of the empirical scope rather than assumed to be
-interchangeable with the current sample.
+The v01 development sample consists of seven Q1 cohorts and does not constitute
+a complete annual sample. Cohort identity is retained in downstream analysis to
+preserve provenance and to permit examination of vintage heterogeneity.
+
+For an origination-quarter robustness assessment, nine available Q3 cohorts
+(`2006Q3`–`2024Q3`, with gaps in years) have been processed. Together they
+contain 281,706,562 rows, use the same 113-field structure, and satisfy the
+initial quality checks. The Q3 workstream is not added to the principal v01
+development sample before an independent transportability assessment. This
+preserves the distinction between model development and validation. See the
+[Q3 audit](../17_q3_archive_audit_execution_report.md) and the [comparative analysis](../19_q1_q3_comparative_analysis_execution_report.md).
+
+## 2.6. Source traceability
+
+The official file layout and glossary are the primary source for interpreting
+fields, codes, and format-version differences [57]. Academic sources on the
+temporal structure of credit risk and explainability do not replace that
+specification; they inform the experimental design, temporal validation, and
+model-auditability requirements [6], [53], [55], [56].

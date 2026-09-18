@@ -1,0 +1,19 @@
+{
+  "target": "formal_adverse_6m",
+  "model_type": "lightgbm",
+  "training_sampling": "case-control; calibration is fitted on validation only",
+  "validation": {
+    "rows": 1034605,
+    "events": 9343,
+    "roc_auc": 0.865095,
+    "pr_auc": 0.304599,
+    "brier_uncalibrated": 0.01737
+  },
+  "out_of_time_test": {
+    "rows": 1748449,
+    "events": 7738,
+    "roc_auc": 0.905752,
+    "pr_auc": 0.3056,
+    "brier_uncalibrated": 0.01758
+  }
+}

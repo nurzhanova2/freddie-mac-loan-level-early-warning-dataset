@@ -13,6 +13,11 @@
 - [Глава 5. Интерпретируемость и model governance](chapters/05_explainability_governance_chapter.md)
 - [Глава 6. Результаты, обсуждение и выводы](chapters/06_results_discussion_chapter.md)
 
+## Диссертационные приложения
+
+- [Приложение А. Методологический аудит данных и моделей](appendices/appendix_a_methodological_audit.md)
+- [Перечень таблиц и рисунков](appendices/list_of_tables_and_figures.md)
+
 ## Технические приложения
 
 - [Этапы 1–3](01_03_execution_report.md) — журнал проектирования и структуры данных.
@@ -25,5 +30,9 @@
 - [Этап 14](14_threshold_policy_execution_report.md) — калибровка ведущей модели и политика порогов.
 - [Этап 15](15_explainability_execution_report.md) — SHAP-аудит и устойчивость объяснений.
 - [Этап 16](16_final_results_execution_report.md) — итоговые результаты и выводы.
+- [Этап 17](17_q3_archive_audit_execution_report.md) — аудит исходных архивов Q3-когорт для проверки устойчивости к кварталу выдачи.
+- [Этап 18](18_q3_panel_and_outcome_construction_execution_report.md) — построение панелей и исходов Q3-когорт.
+- [Этап 19](19_q1_q3_comparative_analysis_execution_report.md) — сравнительный анализ Q1/Q3-когорт.
+- [Этап 23](23_q3_explainability_governance_execution_report.md) — Q1/Q3 SHAP-аудит и governance.
 
 Технические отчёты подтверждают результаты главы, но не заменяют её.

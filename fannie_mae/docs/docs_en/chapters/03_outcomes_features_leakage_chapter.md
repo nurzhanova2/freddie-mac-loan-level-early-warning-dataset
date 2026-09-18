@@ -6,7 +6,8 @@ The analysis treats each loan-month as a prediction date. Predictors may use
 only information available at or before month *t*, whereas the outcome is
 realised in the subsequent three- or six-month window. This temporal ordering is
 the central condition for interpreting the exercise as early warning rather
-than retrospective classification.
+than retrospective classification; it is consistent with dynamic and survival
+approaches to credit risk [6], [52], [53].
 
 ## 3.2. Outcome definitions and censoring
 
@@ -16,7 +17,8 @@ loans current at *t* and records a subsequent status from 01 to 98, correspondin
 to 30+ days past due. Codes XX and 99 are not counted as events. Prepayment,
 maturity, and zero-balance termination are not redefined as default. When a
 future window is incomplete or the future status is not observed, the
-observation is censored rather than labelled as a non-event.
+observation is censored rather than labelled as a non-event. The treatment of
+statuses and codes follows the official Fannie Mae delivery specification [57].
 
 ## 3.3. Predictor admissibility
 
@@ -27,6 +29,8 @@ documents the treatment of all 113 source fields. Zero Balance Code, Zero
 Balance Effective Date, foreclosure/disposition fields, and other post-event
 variables are excluded because they can reveal information generated after the
 prediction date. The register makes this methodological exclusion auditable.
+This distinction is consistent with requirements for auditability and temporal
+admissibility of data in credit modelling [55], [56].
 
 ## 3.4. Label construction and descriptive evidence
 
@@ -50,4 +54,20 @@ The outcome definitions operationalise subsequent payment deterioration; they
 do not constitute a universal definition of default. Their adequacy therefore
 depends on the stated data-generating setting and forecast horizon. The
 cohort-level delinquency distribution and calendar trend are reported in
-**Figures 3.2–3.3** and the [stage-11 report](../11_exploratory_data_analysis_report.md).
+**Figure 3.2** — [“Distribution of current delinquency status”](../../../reports/figures/eda_v01/02_current_delinquency_distribution.png),
+**Figure 3.3** — [“Calendar trend in delinquency”](../../../reports/figures/eda_v01/05_calendar_month_delinquency_trend.png),
+and the [stage-11 report](../11_exploratory_data_analysis_report.md).
+
+## 3.6. Comparison of Q1 and Q3 cohorts
+
+Matched acquisition years show that Q1 and Q3 cohorts differ in both
+origination characteristics and subsequent outcome rates. In 2020, the
+six-month formal-adverse rate is 1.0113% for Q1 and 0.2646% for Q3, while the
+early-deterioration rate is 2.6480% and 1.5580%, respectively. In 2022, the
+direction differs: formal-adverse rates are 0.5304% for Q1 and 0.8374% for Q3,
+and early-deterioration rates are 2.5353% and 3.2676%. Thus, the origination
+quarter cannot be treated as a neutral substitution within a calendar year.
+This observation motivates independent Q3 model evaluation, but does not
+identify the cause of the differences. Results are shown in **Figure 3.4** —
+[“Q1/Q3 outcome comparison”](../../../reports/figures/q1_q3_robustness_v01/01_q1_q3_outcome_comparison.png)
+and **Table 3.3** — [“Matched Q1/Q3 comparison”](../../../reports/q1_q3_robustness_v01/02_matched_q1_q3_comparison.csv).

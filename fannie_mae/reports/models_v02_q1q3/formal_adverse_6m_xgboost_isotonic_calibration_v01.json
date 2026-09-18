@@ -1,0 +1,20 @@
+{
+  "target": "formal_adverse_6m",
+  "model_type": "xgboost",
+  "calibration_data": "validation natural-rate deterministic 1% sample only",
+  "evaluation_data": "out_of_time_test natural-rate deterministic 1% sample",
+  "validation_rows": 1034605,
+  "validation_events": 9343,
+  "out_of_time_test_rows": 1748449,
+  "out_of_time_test_events": 7738,
+  "out_of_time_test_uncalibrated": {
+    "roc_auc": 0.907094,
+    "pr_auc": 0.308719,
+    "brier_score": 0.017621
+  },
+  "out_of_time_test_isotonic_calibrated": {
+    "roc_auc": 0.906892,
+    "pr_auc": 0.293206,
+    "brier_score": 0.003618
+  }
+}

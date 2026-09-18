@@ -1,0 +1,20 @@
+{
+  "target": "early_deterioration_6m",
+  "model_type": "lightgbm",
+  "calibration_data": "validation natural-rate deterministic 1% sample only",
+  "evaluation_data": "out_of_time_test natural-rate deterministic 1% sample",
+  "validation_rows": 1022461,
+  "validation_events": 28089,
+  "out_of_time_test_rows": 1732763,
+  "out_of_time_test_events": 37013,
+  "out_of_time_test_uncalibrated": {
+    "roc_auc": 0.744022,
+    "pr_auc": 0.071047,
+    "brier_score": 0.052938
+  },
+  "out_of_time_test_isotonic_calibrated": {
+    "roc_auc": 0.743829,
+    "pr_auc": 0.068921,
+    "brier_score": 0.020474
+  }
+}

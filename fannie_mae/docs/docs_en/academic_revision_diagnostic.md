@@ -21,9 +21,10 @@ interpretation.
 
 ## Elements to address in the final thesis version
 
-- **[CITATION NEEDED]** The literature review should cite sources supporting
-  XAI/SHAP, temporal validation, probability calibration, and the SupTech
-  framing. Links to project artefacts do not replace scholarly sources.
+- **[SOURCE INTEGRATION IN PROGRESS]** A working source register and in-text
+  citations in Chapters 1–6 have been added. Before the final version is
+  issued, the full reference list should be formatted to the university's
+  required bibliographic standard and checked against the institutional template.
 - **[JUSTIFICATION NEEDED]** If new models or cohorts are added, the comparison
   criterion and leading-model selection rule should be specified in advance.
 - **[LIMITATION TO RETAIN]** Generalisation to Freddie Mac, other populations,

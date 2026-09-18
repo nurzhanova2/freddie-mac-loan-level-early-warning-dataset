@@ -1,0 +1,20 @@
+{
+  "target": "early_deterioration_6m",
+  "training_sampling": "case-control; probability calibration deferred to stage 14",
+  "validation": {
+    "rows": 1022461,
+    "events": 28089,
+    "event_rate_pct": 2.7472,
+    "roc_auc": 0.752478,
+    "pr_auc": 0.089385,
+    "brier_uncalibrated": 0.060258
+  },
+  "out_of_time_test": {
+    "rows": 1732763,
+    "events": 37013,
+    "event_rate_pct": 2.1361,
+    "roc_auc": 0.737829,
+    "pr_auc": 0.062041,
+    "brier_uncalibrated": 0.056033
+  }
+}

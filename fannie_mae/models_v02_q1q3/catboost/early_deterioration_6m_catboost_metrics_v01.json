@@ -1,0 +1,19 @@
+{
+  "target": "early_deterioration_6m",
+  "model_type": "catboost",
+  "training_sampling": "case-control; calibration is fitted on validation only",
+  "validation": {
+    "rows": 1022461,
+    "events": 28089,
+    "roc_auc": 0.754246,
+    "pr_auc": 0.097182,
+    "brier_uncalibrated": 0.057483
+  },
+  "out_of_time_test": {
+    "rows": 1732763,
+    "events": 37013,
+    "roc_auc": 0.742818,
+    "pr_auc": 0.071017,
+    "brier_uncalibrated": 0.054001
+  }
+}
